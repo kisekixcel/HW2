@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // APIs
 app.use('/api', ApiRouter);
 
-app.listen(3001, () => {
+app.listen(process.env.PORT || 3001, () => {
   console.log('Server running on http://localhost:3001')
 
   const connectionString = 'postgres://sjdyjsst:N7oOwXQNiNdYsMAzGVx-cQ9F0_9fcEfe@fanny.db.elephantsql.com/sjdyjsst'
