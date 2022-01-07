@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ATS</title>
+    <script src="./js/main.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="./css/overlay-loading.css" rel="stylesheet" />
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+  <div id="h2_and_2_p"></div>
+
+
+  <div id="like_button_container"></div>
+
+    <h1>Generate ATS</h1>
+    <input id="ATS-Code" />
+    <button id="ATS-Generator">Generate</button>
+    <button id="ATS-RandomGenerator">Random Generate</button>
+
+    <h1>Generated ATS</h1>
+    <p id=GeneratedATS></p>
+
+    <h1>Submit ATS</h1>
+    <input id="ATSCodeInput" />
+    <button id="ATS-Submit">Submit</button>
+
+    <p id="status"></p>
+
+    <div id="loading" class="loading">
+        <div class="spinner-wrapper">
+          <span class="spinner-text">LOADING</span>
+          <span class="spinner"></span>
+        </div>
+      </div>
+
+
+  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Load our React component. -->
+  <script src="./js/like_button.js"></script>
+</body>
+
+</html>
