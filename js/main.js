@@ -108,6 +108,7 @@ window.addEventListener('DOMContentLoaded', function () {
         if (ats) {
             GeneratedATS.innerHTML = ats;
         } else {
+            console.log(response)
             return getAtsCode().then(function (response) {
                 GeneratedATS.innerHTML = response.ats;
             }).catch(function (error) {

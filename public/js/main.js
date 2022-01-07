@@ -91,8 +91,11 @@ function getAtsCode() {
     return axios
         .get(`/api/ats/1`, promise)
         .then(function (response) {
-            console.log(response)
-            return response.data
+            if (response.data) {
+                return response.data
+            } else {
+                return response.data.error
+            }
         }).catch(function (error) {
             console.log(error)
             if (error.response) {
@@ -121,7 +124,11 @@ window.addEventListener('DOMContentLoaded', function () {
         } else {
             return getAtsCode()
                 .then(function (response) {
-                    GeneratedATS.innerHTML = response.ats;
+                    if (response.ats) {
+                        GeneratedATS.innerHTML = response.ats;
+                    } else {
+                        GeneratedATS.innerHTML = response.error;
+                    }
                 })
                 .catch(function (error) {
                     GeneratedATS.innerHTML = JSON.parse(error.message).error
